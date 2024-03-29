@@ -70,5 +70,4 @@ export const UserManagementDetail = () => {
     </div>
   );
 };
-
 export default UserManagementDetail;
