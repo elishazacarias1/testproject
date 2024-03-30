@@ -4,7 +4,7 @@ on:
     branches:
       - main
 
-jobs:
+jobs:   
   build-and-test-maven:
     runs-on: ubuntu-latest
     steps:
@@ -36,3 +36,18 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
+
+  build-and-run-docker:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      # Build Docker image
+      - name: Build Docker image
+        run: docker build -t my-docker-image--test .
+      
+      # Run Docker container
+      - name: Run Docker container
+        run: docker run my-docker-image
