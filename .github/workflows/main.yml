@@ -46,7 +46,7 @@ jobs:
       
       # Build Docker image
       - name: Build Docker image
-        run: docker build -t my-docker-image--test .
+        run: docker build -t my-docker-image /.devcontainer/Dockerfile
       
       # Run Docker container
       - name: Run Docker container
