@@ -1,17 +1,13 @@
-#  will run automatically each time someone pushes a change to the repository
-name: Run on Push
-
-on:
-  push:
-    branches:
-      - '*'
-
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
 jobs:
-  build:
+  check-bats-version:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      # Add your build, test, or deployment steps here
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install -g bats
+      - run: bats -v
