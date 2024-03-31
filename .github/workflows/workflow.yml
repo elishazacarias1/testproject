@@ -1,7 +1,8 @@
 name: learn-github-actions
 on: [push]
 
-jobs:   
+jobs:
+     
   build-and-test-maven:
     runs-on: ubuntu-latest
     steps:
@@ -22,14 +23,16 @@ jobs:
       - name: Run Java Tests
         run: mvn test
         
-  # build-and-test-nodejs:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #     - name: Use Node.js
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version: '20.x'
-  #     - run: npm ci
-  #     - run: npm run build --if-present
-  #     - run: npm test
+
+  create-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Archive build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: path/to/artifact
+
+
+
+
