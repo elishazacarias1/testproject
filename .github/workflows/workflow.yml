@@ -14,7 +14,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: mavens
+          cache: maven
 
       # # build with automated run, run checks on code, update dependencies on the fly
       # - name: Build with Maven
