@@ -16,6 +16,12 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
+      - name: Build Docker Image
+        run: docker build -t test-project-e -f .devcontainer/Dockerfile .
+
+      - name: Push Docker Image to Registry
+        run: docker push test-project-e
+
       # # build with automated run, run checks on code, update dependencies on the fly
       # - name: Build with Maven
       #   run: mvn --batch-mode --update-snapshots verify
@@ -23,11 +29,6 @@ jobs:
       # # Run tests
       # - name: Run Java Tests
       #   run: mvn test
-
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
-        with:
-             name: Build
-             path: .github/artifacts
+          
 
 
