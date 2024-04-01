@@ -26,10 +26,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker tag image
-        run: docker tag test-project-e ${{ secrets.DOCKER_USERNAME }}/test-project-e
+        run: docker tag test-project-e:latest ${{ secrets.DOCKER_USERNAME }}/swe5006_team28:firstpush
           
       - name: Push Docker Image to Registry
-        run: docker push test-project-e
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/swe5006_team28:firstpush
 
       # # build with automated run, run checks on code, update dependencies on the fly
       # - name: Build with Maven
