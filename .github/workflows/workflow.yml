@@ -40,7 +40,7 @@ jobs:
       # - name: Run Java Tests
       #   run: mvn test
       - name: Deploy to Server 1
-        uses: easingthemes/ssh-deploy@5.0.3
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           SOURCE: "./"
