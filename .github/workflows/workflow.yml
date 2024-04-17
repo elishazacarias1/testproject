@@ -44,7 +44,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           SOURCE: "./"
-          REMOTE_HOST: "ec2-54-254-138-66.ap-southeast-1.compute.amazonaws.com"
+          REMOTE_HOST: "ec2-54-179-142-154.ap-southeast-1.compute.amazonaws.com"
           REMOTE_USER: "ubuntu"
-          TARGET: "/FoodTrackingProductApp"
+          TARGET: "FoodTrackingProductApp"
 
