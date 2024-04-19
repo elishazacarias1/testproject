@@ -61,6 +61,7 @@ jobs:
           script: |
             # docker pull ${{ secrets.DOCKER_USERNAME }}/swe5006_team28:firstpush
             docker images
-            sudo netstat -tuln | grep ':80'
-            # docker run -d --name testapp_current -p 80:80 0b1a81f4d171   
+            docker stop 0b1a81f4d171
+            docker stop 245646676852   
+            docker run -d --name testapp_current -p 80:80 0b1a81f4d171   
 
