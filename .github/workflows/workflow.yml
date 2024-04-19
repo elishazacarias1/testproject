@@ -60,4 +60,5 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             docker images
-            docker run -d 245646676852 --name testapp -p 80:80       
+            docker run -d --name testapp -p 80:80 245646676852
+
