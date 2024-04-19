@@ -41,14 +41,14 @@ jobs:
       #   run: mvn test
 
 
-      - name: Deploy to Server 1
-        uses: easingthemes/ssh-deploy@v5.0.3
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          SOURCE: "./"
-          REMOTE_HOST: "ec2-54-255-228-233.ap-southeast-1.compute.amazonaws.com"
-          REMOTE_USER: "ubuntu"
-          TARGET: "FoodTrackingProductApp"
+      # - name: Deploy to Server 1
+      #   uses: easingthemes/ssh-deploy@v5.0.3
+      #   env:
+      #     SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+      #     SOURCE: "./"
+      #     REMOTE_HOST: "ec2-54-255-228-233.ap-southeast-1.compute.amazonaws.com"
+      #     REMOTE_USER: "ubuntu"
+      #     TARGET: "FoodTrackingProductApp"
 
 
 
