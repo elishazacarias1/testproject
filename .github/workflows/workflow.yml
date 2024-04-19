@@ -63,6 +63,7 @@ jobs:
             docker images
             docker container stop 0b1a81f4d171
             docker container stop 245646676852   
+            docker run -d -p 80:80 0b1a81f4d171   
             docker ps 
-            docker run -d -p 82:82 0b1a81f4d171   
+           
 
