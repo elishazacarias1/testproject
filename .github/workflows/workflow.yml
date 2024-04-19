@@ -59,6 +59,7 @@ jobs:
           username: "ubuntu"
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
+            docker pull ${{ secrets.DOCKER_USERNAME }}/swe5006_team28:firstpush
             docker images
-            docker run -d --name testapp -p 80:80 245646676852
+            # docker run -d --name testapp -p 80:80 245646676852
 
