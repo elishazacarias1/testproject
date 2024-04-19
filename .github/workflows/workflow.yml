@@ -55,14 +55,9 @@ jobs:
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         with:
-          host: "ec2-54-255-228-233.ap-southeast-1.compute.amazonaws.com"
+          host: "ec2-13-212-36-19.ap-southeast-1.compute.amazonaws.com"
           username: "ubuntu"
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            sudo apt-get -y update
-            sudo apt-get install -y apache2
-            sudo systemctl start apache2
-            sudo systemctl enable apache2
-            cd home
-            sudo mv * /var/www/html
-
+            docker pull elishazacarias/swe5006_team28:firstpush
+            docker run -d -name testapp 80:80 elishazacarias/swe5006_team28:firstpush
