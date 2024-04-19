@@ -60,4 +60,4 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             docker pull elishazacarias/swe5006_team28:firstpush
-            docker run -d -name testapp 80:80 elishazacarias/swe5006_team28:firstpush
+            docker run -d --name testapp 80:80 elishazacarias/swe5006_team28:firstpush
