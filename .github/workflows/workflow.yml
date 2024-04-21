@@ -63,7 +63,7 @@ jobs:
             docker images
             docker save -o backendimage.tar fpta_backend_latest
             docker load -i backendimage.tar
-            docker run -d -p 8080:8080 backend
+            docker run -d -p 8080:8080 backendimage.tar
       
            
 
