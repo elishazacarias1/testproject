@@ -60,6 +60,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             docker pull ${{ secrets.DOCKER_USERNAME }}/swe5006_team28:fpta_backend_latest
+            docker images
             docker save -o backendimage.tar swe5006_team28:fpta_backend_latest
             docker load -i backendimage.tar
             docker run -d -p 8080:8080 backend
