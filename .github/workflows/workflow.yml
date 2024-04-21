@@ -61,7 +61,7 @@ jobs:
           script: |
             docker pull ${{ secrets.DOCKER_USERNAME }}/swe5006_team28:fpta_backend_latest
             docker images
-            docker save swe5006_team28:fpta_backend_latest > my_image_latest
+            docker save -o backendimage.tar fpta_backend_latest
             docker load -i backendimage.tar
             docker run -d -p 8080:8080 backend
       
