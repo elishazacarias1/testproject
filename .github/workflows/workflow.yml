@@ -55,12 +55,12 @@ jobs:
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         with:
-          host: "ec2-13-212-109-129.ap-southeast-1.compute.amazonaws.com"
+          host: "ec2-13-212-174-159.ap-southeast-1.compute.amazonaws.com"
           username: "ubuntu"
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
            docker pull elishazacarias/swe5006_team28:fpta_frontend_latest
            docker images
-           docker run -d -p 9000:9000 1085f1b4b277   
+           # docker run -d -p 9000:9000 1085f1b4b277   
          
            
