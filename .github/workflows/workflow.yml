@@ -63,9 +63,11 @@ jobs:
             docker images
             # docker save -o backendimage.tar fpta_backend_latest
             # docker load -i backendimage.tar
+            docker ps -q
             docker stop $(docker ps -q) 
             docker run -d -p 8080:8080 d87f04da820e  
             docker run -d -p 9001:9001 4601ff5b0ad9      
+            docker ps
       
            
 
