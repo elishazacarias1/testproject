@@ -59,7 +59,6 @@ jobs:
           username: "ubuntu"
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-           docker pull elishazacarias/swe5006_team28:fpta_backend_latest
-           docker pull elishazacarias/swe5006_team28:fpta_frontend_latest
+           docker images
          
            
