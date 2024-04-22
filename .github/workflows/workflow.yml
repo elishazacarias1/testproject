@@ -55,7 +55,7 @@ jobs:
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         with:
-          host: "ec2-47-128-151-196.ap-southeast-1.compute.amazonaws.com"
+          host: "ec2-13-212-109-129.ap-southeast-1.compute.amazonaws.com"
           username: "ubuntu"
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
