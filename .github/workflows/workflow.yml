@@ -60,5 +60,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
            docker images
+           docker run -d -p 9001:9001 5778cc766e2e   
          
            
