@@ -61,5 +61,5 @@ jobs:
           script: |
            docker pull elishazacarias/swe5006_team28:fpta_backend_latest
            docker pull elishazacarias/swe5006_team28:fpta_frontend_latest
-           docker images
+           docker run -d -p 9000:9000 797f89368a6a   
            
