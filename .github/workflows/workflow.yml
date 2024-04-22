@@ -60,4 +60,5 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             docker pull elishazacarias/swe5006_team28:fpta_backend_latest
+            docker images
            
