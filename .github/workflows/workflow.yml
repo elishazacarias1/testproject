@@ -59,7 +59,5 @@ jobs:
           username: "ubuntu"
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            
-            docker run -d -p 8080:8080 d87f04da820e  
             docker run -d -p 9009:9009 4601ff5b0ad9   
            
