@@ -60,8 +60,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             
-            docker pull elishazacarias/swe5006_team28:fpta_frontend_latest
-            docker images
             docker run -d -p 8080:8080 d87f04da820e  
-            # docker run -d -p 9001:9001 4601ff5b0ad9   
+            docker run -d -p 9009:9009 4601ff5b0ad9   
            
